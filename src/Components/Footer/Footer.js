@@ -1,14 +1,14 @@
 import "./footer.css";
 import React from "react";
-import party from "../../Assets/images/party.png";
-import sad from "../../Assets/images/sad.png";
+import imgParty from "../../Assets/images/party.png";
+import imgSad from "../../Assets/images/sad.png";
 
 export default function Footer(props) {
   const feedbacks = {
     titleParty: "Parabens!",
     titleSad: "Putz...",
-    imgParty: party,
-    imgSad: sad,
+    imgParty: imgParty,
+    imgSad: imgSad,
     textParty: "Você não esqueceu de nenhum flashcard!",
     textSad: "Ainda faltam alguns... Mas não desanime!"
   };

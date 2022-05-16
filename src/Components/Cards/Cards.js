@@ -27,12 +27,11 @@ export default function Cards() {
   const perguntas = [];
   let indice;
   let aux = [];
-  let NUMBER_MAGIC = 3;
+  let num = 3;
 
-  for (let i = 0; i < perguntasEmOrdem.length + NUMBER_MAGIC; i++) {
+  for (let i = 0; i < perguntasEmOrdem.length + num; i++) {
     indice = parseInt(Math.random() * perguntasEmOrdem.length);
     aux = perguntasEmOrdem.splice(indice, 1);
-    console.log(perguntasEmOrdem.length);
     perguntas.push(aux[0]);
   }
 
@@ -46,23 +45,15 @@ export default function Cards() {
         <Init classe={"logo2"} />
         <div className="flashcards">
           {perguntas.map((p, index) => (
-            <Flashcard
-              dadosTexto={p}
-              indexPergunta={index + 1}
-              contaRespostas={setRespondidas}
-              qtdRespostas={respondidas}
-              mudarIcones={setIcones}
-              iconesAtuais={icones}
-              lembrouQtd={qtdLembrou}
-              setLembrouQtd={setQtdLembrou}
+            <Flashcard dadosTexto={p} indexPergunta={index + 1} contaRespostas={setRespondidas}
+              qtdRespostas={respondidas} mudarIcones={setIcones} iconesAtuais={icones}
+              lembrouQtd={qtdLembrou} setLembrouQtd={setQtdLembrou}
             />
           ))}
         </div>
         <Footer
-          qtdRespondidas={respondidas}
-          icones={icones}
-          perguntas={perguntas}
-          qtd={qtdLembrou}
+          qtdRespondidas={respondidas} icones={icones}
+          perguntas={perguntas} qtd={qtdLembrou}
         />
       </div>
     </>
