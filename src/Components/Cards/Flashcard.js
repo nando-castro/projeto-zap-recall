@@ -20,10 +20,10 @@ export default function Flashcard(props) {
     }
   }
 
-  function Resposta() {
-    function Opcoes() {
+  function Answer() {
+    function Options() {
       return (
-        <div className="opcoes">
+        <div className="options">
           <p
             onClick={() => respondido("wrong", "close-circle-sharp")}
             className="level-wrong"
@@ -46,10 +46,10 @@ export default function Flashcard(props) {
       );
     }
 
-    return <Opcoes />;
+    return <Options />;
   }
 
-  function Escondido() {
+  function Hidden() {
     return (
       <div className={resposta} onClick={() => setTelaFlash("pergunta")}>
         <p>Pergunta {props.indexPergunta}</p>
@@ -58,8 +58,8 @@ export default function Flashcard(props) {
       </div>
     );
   }
-  function Pergunta() {
-    function verResposta() {
+  function Quest() {
+    function SeeAnswer() {
       setTexto(props.dadosTexto.response);
       setTelaResposta(true);
     }
@@ -67,11 +67,11 @@ export default function Flashcard(props) {
       <div className="pergunta">
         <p>{texto}</p>
         {telaResposta ? (
-          <Resposta />
+          <Answer />
         ) : (
           <img
             className="seta-mostrar-opcoes"
-            onClick={() => verResposta()}
+            onClick={() => SeeAnswer()}
             src={vira}
             alt=""
           />
@@ -82,15 +82,15 @@ export default function Flashcard(props) {
 
   return (
     <>
-      {telaFlash === "escondido" ? <Escondido /> : ""}
-      {telaFlash === "respondido" ? <Escondido /> : ""}
+      {telaFlash === "escondido" ? <Hidden /> : ""}
+      {telaFlash === "respondido" ? <Hidden /> : ""}
       {telaFlash === "pergunta" &&
-      (resposta === "ruim" || resposta === "medio" || resposta === "bom") ? (
-        <Escondido />
+      (resposta === "wrong" || resposta === "almost" || resposta === "correct") ? (
+        <Hidden />
       ) : (
         ""
       )}
-      {telaFlash === "pergunta" && resposta === "flashcard" ? <Pergunta /> : ""}
+      {telaFlash === "pergunta" && resposta === "flashcard" ? <Quest /> : ""}
     </>
   );
 }

@@ -95,7 +95,7 @@
     right: 10px;
   }
   
-  .opcoes {
+  .options {
     width: 96%;
     margin: 0 auto;
     position: absolute;
@@ -106,7 +106,7 @@
     right: 2%;
   }
   
-  .opcoes p {
+  .options p {
     font-size: 0.8rem;
     display: flex;
     align-items: center;

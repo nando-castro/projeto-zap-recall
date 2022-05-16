@@ -7,20 +7,20 @@ import Footer from "../Footer/Footer";
 export default function Cards() {
   const perguntasEmOrdem = [
     {
-      question: "",
-      response: ""
+      question: "O que é JSX?",
+      response: "Uma extensão de linguagem do JavaScript"
     },
     {
-      question: "",
-      response: ""
+      question: "O React é __",
+      response: "uma biblioteca JavaScript para construção de interfaces"
     },
     {
-      question: "",
-      response: ""
+      question: "Podemos colocar __ dentro do JSX",
+      response: "expressões"
     },
     {
-      question: "",
-      response: ""
+      question: "Usamos o npm para __ ",
+      response: " gerenciar os pacotes necessários e suas dependências"
     }
   ];
 

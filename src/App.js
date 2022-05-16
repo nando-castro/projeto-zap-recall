@@ -1,7 +1,7 @@
 import React from "react";
 import "../src/Assets/css/reset.css";
 import "../src/Assets/css/style.css";
-import Content from "./Components/Home/Content";
+import Content from "./Components/Content/Content";
 import Cards from "./Components/Cards/Cards";
 
 export default function App() {
