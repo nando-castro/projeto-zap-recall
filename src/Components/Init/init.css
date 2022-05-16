@@ -27,3 +27,21 @@ h1 {
   width: 50px;
   margin-right: 1rem;
 }
+
+.input {
+  width: 246px;
+  height: 43px;
+  margin-top: 20px;
+  background: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #ADADAD;
+}
