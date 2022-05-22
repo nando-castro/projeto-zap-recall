@@ -1,5 +1,9 @@
 import ReactDOM from "react-dom";
 import App from "./App";
 
-const root = document.querySelector("#root");
-ReactDOM.render(<App />, root);
+
+import "./assets/css/reset.css";
+import "./assets/css/style.css";
+
+
+ReactDOM.render(<App />,document.querySelector(".root"));
