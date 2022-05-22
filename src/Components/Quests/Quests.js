@@ -2,7 +2,7 @@ import React from "react";
 import data from "../../data/index";
 import logo from "../../assets/img/logo-pequeno.png"
 import FlashCard from "../Flashcard/Flashcard";
-import Icon from "./../../Components/shared/Icon"
+import Icon from "../shared/Icon"
 
 let questionsData = data.map(value => {
     return {

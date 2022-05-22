@@ -1,16 +1,13 @@
-import React from "react";
-import "../src/Assets/css/reset.css";
-import "../src/Assets/css/style.css";
-import Content from "./Components/Content/Content";
-import Cards from "./Components/Cards/Cards";
+import { useState } from "react";
+import Home from "./Components/Home/Home";
+import Quests from "./Components/Quests/Quests";
 
-export default function App() {
-  const [tela, setTela] = React.useState("home");
+export default function App(){
+    const [visible, setVisible] = useState(true);
 
-  return (
-    <>
-      {tela === "home" ? <Content entrar={setTela} /> : ""}
-      {tela === "cards" ? <Cards /> : ""}
-    </>
-  );
+    return (
+        <>
+            {visible ? <Home setVisible={setVisible} /> : <Quests />}
+        </>
+    );
 }
